@@ -58,12 +58,7 @@ double oblicz(double x, double y) {
 		break;
 	}
 	case 9: {
-		if (x >= 0) {
-			wynik = x;
-		}
-		else {
-			wynik = x - (2 * x);
-		}
+		wynik = abs(x);
 
 		break;
 	}
