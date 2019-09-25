@@ -5,6 +5,8 @@
 
 using namespace std;
 
+#define PI 3.14159265
+
 double a, b, wynik;
 bool repeat = true;
 int menu;
@@ -62,6 +64,21 @@ double oblicz(double x, double y) {
 
 		break;
 	}
+	case 10: {
+		wynik = tan(x * PI / 180.0);
+
+		break;
+	}
+	case 11: {
+		wynik = cos(x * PI / 180.0);
+
+		break;
+	}
+	case 12: {
+		wynik = sin(x * PI / 180.0);
+
+		break;
+	}
 	}
 
 
@@ -81,6 +98,9 @@ void printmenu() {
 	cout << "7 - Silnia" << endl;
 	cout << "8 - Pierwiastkowanie" << endl;
 	cout << "9 - Wartość bezwzględna" << endl;
+	cout << "10 - Tanges" << endl;
+	cout << "11 - Cosinus" << endl;
+	cout << "12 - Sinus" << endl;
 
 	cout << "Wybierz równanie: ";
 	cin >> menu;
@@ -212,6 +232,39 @@ void printmenu() {
 
 		break;
 	}
+	case 10: {
+		cout << "Podaj liczbę: ";
+		cin >> a;
+		cout << endl;
+
+		oblicz(a,0);
+
+		cout << "Wynik to: " << wynik << endl;
+
+		break;
+	}
+	case 11: {
+		cout << "Podaj liczbę: ";
+		cin >> a;
+		cout << endl;
+
+		oblicz(a,0);
+
+		cout << "Wynik to: " << wynik << endl;
+
+		break;
+	}
+	case 12: {
+		cout << "Podaj liczbę: ";
+		cin >> a;
+		cout << endl;
+
+		oblicz(a,0);
+
+		cout << "Wynik to: " << wynik << endl;
+
+		break;
+	}
 
 
 
@@ -245,33 +298,26 @@ double logarytm(double x , double y) {
 	wynik = (log(y) / log(x));
 	return wynik;
 }
-
 double suma(double x, double y) {
 	wynik = x + y;
 	return wynik;
 }
-
 double roznica(double x, double y) {
 	wynik = x - y;
 	return wynik;
 }
-
 double potega(double x, double y) {
-
 	wynik = pow(x,y);
 	return wynik;
 }
-
 double dzielenie(double x, double y) {
 	wynik = x / y;
 	return wynik;
 }
-
 double mnozenie(double x, double y) {
 	wynik = x * y;
 	return wynik;
 }
-
 double silnia(double x) {
 	double tempx = 1;
 	for (int i = 1; i <=x; i++) {
@@ -280,14 +326,11 @@ double silnia(double x) {
 	wynik = tempx;
 	return wynik;
 }
-
 double pierwiastkowanie(double x, double y) {
-
 	wynik = pow(x, 1/y);
 	return wynik;
 }
 double wartoscbezwzgledna(double x) {
-
 	if (x >= 0) {
 		wynik = x;
 	}
